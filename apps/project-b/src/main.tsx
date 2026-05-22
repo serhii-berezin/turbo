@@ -5,6 +5,7 @@ import App from './App.tsx'
 import "@radix-ui/themes/styles.css"
 import { Theme } from '@radix-ui/themes'
 
+// some comment for project-b
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Theme accentColor='violet'>
