@@ -1,0 +1,27 @@
+name: Monorepo:default
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Gets all tags and history so Turbo can diff properly
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Turbo automatically figures out what changed compared to the last commit
+      - name: Run affected builds and tests
+        run: npx turbo run build --filter=[HEAD~1]
