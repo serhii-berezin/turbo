@@ -23,5 +23,5 @@ jobs:
         run: npm ci
 
       # Turbo automatically figures out what changed compared to the last commit
-      - name: Run affected builds and tests
-        run: npx turbo run build --filter=[HEAD~1]
+      - name: Run affected builds
+        run: npx turbo run build --filter=...[HEAD~1]
