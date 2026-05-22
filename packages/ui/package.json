@@ -1,0 +1,19 @@
+{
+  "name": "@gravix-turbo/ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "exports": {
+    ".": "./index.ts",
+    "./Button": "./Button/Button.tsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "sideEffects": false,
+  "private": true,
+  "dependencies": {
+    "@radix-ui/themes": "^3.3.0"
+  }
+}

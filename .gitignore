@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+build/
+
+# logs
+*.log
+
+# environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# coverage
+coverage/
+
+# cache
+.cache/
+.temp/
+
+# TypeScript
+*.tsbuildinfo
+
+.turbo
